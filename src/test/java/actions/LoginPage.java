@@ -16,15 +16,15 @@ public class LoginPage extends BrowserDriver {
 
     }
 
-    public static void enters_valid_username() throws InterruptedException {
+    public static void enters_valid_username(String username) throws InterruptedException {
         Thread.sleep(1000);
-        driver.findElement(By.id(user_name_input_id)).sendKeys(accepted_username);
+        driver.findElement(By.id(user_name_input_id)).sendKeys(username);
 
     }
 
-    public static void enters_valid_password() throws InterruptedException {
+    public static void enters_valid_password(String password) throws InterruptedException {
         Thread.sleep(1000);
-        driver.findElement(By.id(password_input_id)).sendKeys(accepted_password);
+        driver.findElement(By.id(password_input_id)).sendKeys(password);
 
     }
 
@@ -33,15 +33,15 @@ public class LoginPage extends BrowserDriver {
         driver.findElement(By.id(login_button_id)).click();
     }
 
-    public static void enters_invalid_username() throws InterruptedException {
+    public static void enters_invalid_username(String invalid_username) throws InterruptedException {
         Thread.sleep(1000);
-        driver.findElement(By.id(user_name_input_id)).sendKeys(accepted_username);
+        driver.findElement(By.id(user_name_input_id)).sendKeys(invalid_username);
 
     }
 
-    public static void enters_invalid_password() throws InterruptedException {
+    public static void enters_invalid_password(String invalid_password) throws InterruptedException {
         Thread.sleep(1000);
-        driver.findElement(By.id(password_input_id)).sendKeys("this is a wrong password");
+        driver.findElement(By.id(password_input_id)).sendKeys(invalid_password);
 
     }
 

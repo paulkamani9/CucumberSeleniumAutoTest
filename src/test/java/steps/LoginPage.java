@@ -11,17 +11,17 @@ public class LoginPage {
         validate_login_button_presence();
     }
 
-    @When("^User provides valid login credentials$")
-    public static void user_provides_valid_login_credentials () throws InterruptedException {
-        enters_valid_username();
-        enters_valid_password();
+    @When("^User provides valid \"([^\"]*)\" and \"([^\"]*)\"$")
+    public static void user_provides_valid_username_and_password (String username, String password) throws InterruptedException {
+        enters_valid_username(username);
+        enters_valid_password(password);
         click_login_button();
     }
 
-    @When("^User provides invalid login credentials$")
-    public static void user_provides_invalid_login_credentials () throws InterruptedException {
-        enters_invalid_username();
-        enters_invalid_password();
+    @When("^User provides \"([^\"]*)\" and \"([^\"]*)\"$")
+    public static void user_provides_invalid_username_and_password (String invalid_username, String invalid_password) throws InterruptedException {
+        enters_invalid_username(invalid_username);
+        enters_invalid_password(invalid_password);
         click_login_button();
     }
 
