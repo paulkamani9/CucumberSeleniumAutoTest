@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import utility.BrowserDriver;
 import static pages.LoginPage.*;
+// this is a test comment
 
 public class LoginPage extends BrowserDriver {
     public static void validate_login_button_presence() throws InterruptedException {
